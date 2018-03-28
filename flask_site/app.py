@@ -4,13 +4,9 @@ from flask_debugtoolbar import DebugToolbarExtension
 app = Flask(__name__)
 app.debug = True
 
-@app.route('/<name>')
-def index(name='Nick'):
-    return 'Hello, {}'.format(name)
-
 @app.route('/')
 def home():
-    return 'This is the home page'
+    return render_template('home.html')
 
 @app.route('/results')
 def results():
