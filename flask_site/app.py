@@ -12,3 +12,6 @@ def home():
 def results():
     return 'This is the results page'
 
+@app.route('/about')
+def about():
+    return 'This is the about page'
