@@ -4,26 +4,24 @@
     <title>DisclosUR 2.0</title>
     <link rel="stylesheet" href="test.css">
     <!-- link rel="stylesheet" href="{{ url_for('static', filename='test.css') }}"-->
-    <h1>Financial Disclosures</h1>   
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-</head>
+    </head>
 
 <body>
     <header>
+     <h1>Financial Disclosures</h1>   
         <nav>
-            <a></a>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </nav>
     </header>
 
     <main>
-        <p>A form will go here</p>
+      <form action="results" method="post">
+        <input type="text" id="address" name="user_address"> 
+      </form>
     </main>
 
     <footer>

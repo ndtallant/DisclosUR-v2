@@ -5,12 +5,13 @@ app = Flask(__name__)
 app.debug = True
 
 @app.route('/')
-def home():
-    return render_template('home.html')
+def index():
+    return render_template('index.html')
 
-@app.route('/results')
+@app.route('/results', methods=['POST'])
 def results():
-    return 'This is the results page'
+    address = request.form['user_address'] 
+    return 'The user address is {}'.format(address)
 
 @app.route('/about')
 def about():
