@@ -1,3 +1,21 @@
 body {
-    color: blue;
+    color: black;
+}
+
+head {
+    background: grey;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+footer {
+    background: grey;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+main {
+    background: white;
+    margin: 5px;
+    padding: 30px;
 }
