@@ -8,6 +8,10 @@ app.debug = True
 def index():
     return render_template('index.html')
 
+@app.route('/bootstrap')
+def boot():
+    return render_template('bootstrap.html')
+
 @app.route('/results', methods=['POST'])
 def results():
     address = request.form['user_address'] 
