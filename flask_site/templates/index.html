@@ -1,25 +1,10 @@
+{% extends "base.html" %}
 <!doctype html>
 
-<head>
-    <title>DisclosUR 2.0</title>
-    <link rel="stylesheet" href="static/test.css">
-    </head>
-
-<body>
-    <header>
-        <!--h1 class="title">DisclosUR</h1-->
-        <nav class="bar">
-          <ul>
-            <li class="nav-opt"><a href="#">Contact</a></li>
-            <li class="nav-opt"><a href="about">About</a></li>
-            <li class="nav-opt"><a style="text-decoration: none;" href="">Home</a></li>
-          </ul>
-        </nav>
-    </header>
-
-    <main>
-
-      <div class="container">
+{% block title %} {{ super() }} {% endblock %}
+    
+    {% block content %}
+    <div class="container">
         <form action="results" method="post">
           <h1 style="text-align: center;">DisclosUR</h1>
           
@@ -72,8 +57,7 @@
           </fieldset>
       </form>
     </div> 
+    {% endblock %}
+    
 
-    <footer>
-        <p>Developed by Nick Tallant</p>
-    </footer>
 </body>
