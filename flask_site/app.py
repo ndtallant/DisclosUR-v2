@@ -11,7 +11,7 @@ def index():
 @app.route('/results', methods=['POST'])
 def results():
     address = request.form['user_address'] 
-    return 'The user address is {}'.format(address)
+    return render_template('results.html')
 
 @app.route('/about')
 def about():
