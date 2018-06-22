@@ -29,7 +29,7 @@ def get_location(address, gmaps_key=gmaps_key):
     google_data = r.json()
     loc_dict = google_data['results'][0]['geometry']['location']
     lat, lon = loc_dict['lat'], loc_dict['lng']
-    return lat,lon
+    return lat, lon
 
 def get_legislator_data(address, gmaps_key=gmaps_key, os_key=os_key):
     '''
@@ -53,5 +53,3 @@ def get_legislator_names(address):
         first = metadata[i]['first_name'].title()
         rv.append('{} {}'.format(first, last))
     return rv
-    
-
