@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+<!doctype html>
+
+{% block title %} {{ super() }} {% endblock %}
+{% block content %}  
+    <body> 
+     <h2>Legislators for {{ user_address }}</h2> 
+    </body>
+   
+    <ul>
+      {% for legislator in legislators %}
+        <li>{{ legislator|e }}</li>
+      {% endfor %}
+    </ul>
+    
+    
+    
+    
+    
+    {% endblock %}

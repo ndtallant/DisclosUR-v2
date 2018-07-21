@@ -14,6 +14,22 @@ bootstrap = Bootstrap(app)
 def index():
     return render_template('index.html')
 
+    
+@app.route('/results', methods=['POST'])
+def results():
+    address = request.form['user_address'] 
+    legislators = ['Bob Hall', 'Ted \'the Zodiac\' Cruz'] 
+    print(legislators)    
+    return render_template('results.html', legislators=legislators)
+
+@app.route('/about')
+def about():
+   return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+   return render_template('contact.html')
+
 @app.route('/test_form', methods=['GET', 'POST'])
 def test_form():
     user_address = None
@@ -23,16 +39,6 @@ def test_form():
         form.user_address.data = ''
         return redirect('/results')
     return render_template('test_form.html', form=form, name=user_address)
-    
-
-@app.route('/results', methods=['POST'])
-def results():
-    address = request.form['user_address'] 
-    return 'The user address is {}'.format(address)
-
-@app.route('/about')
-def about():
-   return render_template('about.html')
 
 class MainForm(FlaskForm):
     user_address = StringField('Enter your address:', validators=[DataRequired()])
