@@ -4,17 +4,19 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 from flask_bootstrap import Bootstrap
+from markdown import markdown
+from flask import Markup
 
 app = Flask(__name__)
 app.debug = True
 app.config['SECRET_KEY'] = 'hard to guess string lolol' # will update if this ever goes live
 bootstrap = Bootstrap(app)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
-    
 @app.route('/results', methods=['POST'])
 def results():
     address = request.form['user_address'] 
@@ -24,7 +26,9 @@ def results():
 
 @app.route('/about')
 def about():
-   return render_template('about.html')
+   with open('about.md') as f: 
+       content = Markup(markdown(f.read())) 
+   return render_template('about.html', content=content)
 
 @app.route('/contact')
 def contact():
