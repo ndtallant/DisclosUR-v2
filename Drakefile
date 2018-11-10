@@ -1,0 +1,27 @@
+; Drakefile for DisclosUR
+; Downloads OpenStates data
+; Downloads CPI data
+; Runs OpenCorporates API calls
+; Loads all into Postgres
+
+;;;  LOAD POSTGRES ENVIRONMENT VARIABLES  ;;;
+
+PROFILE:=default_profile
+%include $[PROFILE]
+
+
+;;;  DOWNLOAD AND UNZIP OPENSTATES DATA  ;;;
+
+
+;;; LOAD THE DATA  ;;;
+
+;  Postgres database doesn't have a timestamp we can check,
+;  we create a fake file that tracks the timestamp.
+;
+;  `psql -f` runs the commands in the file
+;  `touch` updates the timestamp on the file or 
+;   creates an empty file if the file doesn't exist
+;  `&&` the second command only runs if the first command finishes
+
+
+
