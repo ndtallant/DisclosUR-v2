@@ -16,8 +16,19 @@ data <- [-timecheck]
   mkdir data && cd data
   mkdir zips && cd ..
 
+data/zips/al.zip <- [-timecheck] 
+  curl -s https://data.openstates.org/legacy/csv/al.zip -o data/zips/al.zip
+
 data/zips/ak.zip <- [-timecheck] 
   curl -s https://data.openstates.org/legacy/csv/ak.zip -o data/zips/ak.zip
+
+data/zips/az.zip <- [-timecheck] 
+  curl -s https://data.openstates.org/legacy/csv/az.zip -o data/zips/az.zip
+
+data/zips/ar.zip <- [-timecheck] 
+  curl -s https://data.openstates.org/legacy/csv/ar.zip -o data/zips/ar.zip
+
+
 
 ;;; LOAD THE DATA  ;;;
 
