@@ -6,12 +6,18 @@
 
 ;;;  LOAD POSTGRES ENVIRONMENT VARIABLES  ;;;
 
-PROFILE:=default_profile
-%include $[PROFILE]
+;PROFILE:=default_profile
+;%include $[PROFILE]
 
 
 ;;;  DOWNLOAD AND UNZIP OPENSTATES DATA  ;;;
 
+data <- [-timecheck] 
+  mkdir data && cd data
+  mkdir zips && cd ..
+
+data/zips/ak.zip <- [-timecheck] 
+  curl -s https://data.openstates.org/legacy/csv/ak.zip -o data/zips/ak.zip
 
 ;;; LOAD THE DATA  ;;;
 
@@ -22,6 +28,5 @@ PROFILE:=default_profile
 ;  `touch` updates the timestamp on the file or 
 ;   creates an empty file if the file doesn't exist
 ;  `&&` the second command only runs if the first command finishes
-
 
 
