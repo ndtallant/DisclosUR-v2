@@ -53,5 +53,3 @@ def get_legislator_names(address):
         first = metadata[i]['first_name'].title()
         rv.append('{} {}'.format(first, last))
     return rv
-    
-

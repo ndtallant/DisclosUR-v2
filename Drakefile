@@ -10,6 +10,7 @@
 ;%include $[PROFILE]
 
 
+
 ;;;  DOWNLOAD AND UNZIP OPENSTATES DATA  ;;;
 
 data <- [-timecheck] 
@@ -179,6 +180,9 @@ data/zips/wy.zip <- [-timecheck]
 data/ak_legislators.csv <- [-timecheck]
   unzip data/zips/ak.zip ak_legislators.csv -d ./data
 
+;;; DISTRICTS BY COUNTY ;;;
+data/districts_by_county.csv <- [-timecheck]
+  python3 scripts/districts.py
 
 ;;; LOAD THE DATA  ;;;
 
