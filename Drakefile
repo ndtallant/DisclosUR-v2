@@ -28,6 +28,156 @@ data/zips/az.zip <- [-timecheck]
 data/zips/ar.zip <- [-timecheck] 
   curl -s https://data.openstates.org/legacy/csv/ar.zip -o data/zips/ar.zip
 
+data/zips/ca.zip <- [-timecheck] 
+  curl -s https://data.openstates.org/legacy/csv/ca.zip -o data/zips/ca.zip
+
+data/zips/co.zip <- [-timecheck] 
+  curl -s https://data.openstates.org/legacy/csv/co.zip -o data/zips/co.zip
+
+data/zips/ct.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ct.zip -o data/zips/ct.zip
+
+data/zips/de.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/de.zip -o data/zips/de.zip
+
+data/zips/dc.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/dc.zip -o data/zips/dc.zip
+
+data/zips/fl.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/fl.zip -o data/zips/fl.zip
+
+data/zips/ga.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ga.zip -o data/zips/ga.zip
+
+data/zips/hi.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/hi.zip -o data/zips/hi.zip
+
+data/zips/id.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/id.zip -o data/zips/id.zip
+
+data/zips/il.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/il.zip -o data/zips/il.zip
+
+data/zips/in.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/in.zip -o data/zips/in.zip
+
+data/zips/ia.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ia.zip -o data/zips/ia.zip
+
+data/zips/ks.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ks.zip -o data/zips/ks.zip
+      
+data/zips/ky.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ky.zip -o data/zips/ky.zip
+      
+data/zips/la.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/la.zip -o data/zips/la.zip
+
+data/zips/me.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/me.zip -o data/zips/me.zip
+      
+data/zips/md.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/md.zip -o data/zips/md.zip
+
+data/zips/ma.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ma.zip -o data/zips/ma.zip
+
+data/zips/mi.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/mi.zip -o data/zips/mi.zip
+      
+data/zips/mn.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/mn.zip -o data/zips/mn.zip
+      
+data/zips/ms.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ms.zip -o data/zips/ms.zip
+      
+data/zips/mo.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/mo.zip -o data/zips/mo.zip
+
+data/zips/mt.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/mt.zip -o data/zips/mt.zip
+
+data/zips/ne.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ne.zip -o data/zips/ne.zip
+
+data/zips/nv.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/nv.zip -o data/zips/nv.zip
+
+data/zips/nh.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/nh.zip -o data/zips/nh.zip
+
+data/zips/nj.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/nj.zip -o data/zips/nj.zip
+
+data/zips/nm.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/nm.zip -o data/zips/nm.zip
+
+data/zips/ny.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ny.zip -o data/zips/ny.zip
+
+data/zips/nc.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/nc.zip -o data/zips/nc.zip
+
+data/zips/nd.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/nd.zip -o data/zips/nd.zip
+
+data/zips/oh.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/oh.zip -o data/zips/oh.zip
+
+data/zips/ok.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ok.zip -o data/zips/ok.zip
+
+data/zips/or.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/or.zip -o data/zips/or.zip
+
+data/zips/pa.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/pa.zip -o data/zips/pa.zip
+
+data/zips/pr.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/pr.zip -o data/zips/pr.zip
+
+data/zips/ri.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ri.zip -o data/zips/ri.zip
+
+data/zips/sc.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/sc.zip -o data/zips/sc.zip
+
+data/zips/sd.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/sd.zip -o data/zips/sd.zip
+
+data/zips/tn.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/tn.zip -o data/zips/tn.zip
+
+data/zips/tx.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/tx.zip -o data/zips/tx.zip
+
+data/zips/ut.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/ut.zip -o data/zips/ut.zip
+
+data/zips/vt.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/vt.zip -o data/zips/vt.zip
+
+data/zips/va.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/va.zip -o data/zips/va.zip
+      
+data/zips/vi.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/vi.zip -o data/zips/vi.zip
+      
+data/zips/wa.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/wa.zip -o data/zips/wa.zip
+
+data/zips/wv.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/wv.zip -o data/zips/wv.zip
+      
+data/zips/wi.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/wi.zip -o data/zips/wi.zip
+      
+data/zips/wy.zip <- [-timecheck]
+  curl -s https://data.openstates.org/legacy/csv/wy.zip -o data/zips/wy.zip
+
+;;; UNZIP ;;;
+data/ak_legislators.csv <- [-timecheck]
+  unzip data/zips/ak.zip ak_legislators.csv -d ./data
 
 
 ;;; LOAD THE DATA  ;;;
