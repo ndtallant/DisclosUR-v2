@@ -182,7 +182,11 @@ data/ak_legislators.csv <- [-timecheck]
 
 ;;; DISTRICTS BY COUNTY ;;;
 data/districts_by_county.csv <- [-timecheck]
-  python3 scripts/districts.py
+  python scripts/districts.py
+
+;;; CPI DATA ;;;
+data/zips/state_lawmaker_disclosures.zip <- [-timecheck]
+  curl -s https://github.com/PublicI/state-lawmakers-disclosures/archive/master.zip -o data/zips/state_lawmaker_disclosures.zip
 
 ;;; LOAD THE DATA  ;;;
 

@@ -11,17 +11,6 @@
           <fieldset>
           <div class="row">
             <div class="col-25">
-              <label for="address">Address</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="address" name="user_address" placeholder="Your address..">
-            </div>
-          </div>
-          </fieldset>
-          
-          <fieldset>
-          <div class="row">
-            <div class="col-25">
               <label for="country">State</label>
             </div>
             <div class="col-75">
@@ -30,8 +19,8 @@
                 <option value="TX">TX</option>
                 <option value="IL">IL</option>
               </select>
-              <select id="district" name="user_district">
-                <option value="">District</option>
+              <select id="county" name="user_county">
+                <option value="">County</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
               </select>
@@ -39,22 +28,6 @@
           </div>
           </fieldset>
 
-          <fieldset>  
-          <div class="row">
-            <div class="col-25">
-              <label for="legislator">Legislator</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="legislator" name="user_legislator" placeholder="Legislator name..">
-            </div>
-          </div>
-          </fieldset>
-         
-          <fieldset>
-          <div class="row">
-            <input type="submit" value="Disclose">
-          </div>
-          </fieldset>
       </form>
     </div> 
     {% endblock %}
