@@ -41,9 +41,12 @@ fips = pd.read_table('https://www2.census.gov/geo/docs/reference/codes/'+
                            , 'countyfp': str
                            , 'county': str
                            , 'classfp': str})
-fips.merge(districts
-        , how='left'
-        , left_on=['statefp', 'countyfp']
-        , right_on=['State', 'County'])
-
+fips = fips.merge(districts
+                , how='left'
+                , left_on=['statefp', 'countyfp']
+                , right_on=['State', 'County'])[['state_postal'
+                           , 'statefp'
+                           , 'countyfp'
+                           , 'county'
+                           , 'CongressionalDistrict']]
 fips.to_csv('../data/districts_by_county.csv', index=False)

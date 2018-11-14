@@ -1,6 +1,13 @@
 # Dockerfile for DisclosUR
 
-# Use an official Python runtime as a parent image
-FROM python:3.7-alpine
+FROM python:3.7
+LABEL maintainer "Nick Tallant <ndtallant@gmail.com>"
+
+# Flask app setup
+#COPY . /app
+#WORKDIR /app
+#RUN pip install pipenv
+#ENV FLASK_ENV=docker
+#EXPOSE 5000
 
 # FROM postgres:10.6
