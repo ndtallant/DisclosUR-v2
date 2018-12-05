@@ -9,8 +9,6 @@
 ;PROFILE:=default_profile
 ;%include $[PROFILE]
 
-
-
 ;;;  DOWNLOAD AND UNZIP OPENSTATES DATA  ;;;
 
 data <- [-timecheck] 
