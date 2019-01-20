@@ -9,11 +9,11 @@
 ;PROFILE:=default_profile
 ;%include $[PROFILE]
 
-;;;  DOWNLOAD AND UNZIP OPENSTATES DATA  ;;;
-
 data <- [-timecheck] 
   mkdir data && cd data
   mkdir zips && cd ..
+
+;;;  DOWNLOAD AND UNZIP OPENSTATES DATA  ;;;
 
 data/zips/al.zip <- [-timecheck] 
   curl -s https://data.openstates.org/legacy/csv/al.zip -o data/zips/al.zip
@@ -175,8 +175,165 @@ data/zips/wy.zip <- [-timecheck]
   curl -s https://data.openstates.org/legacy/csv/wy.zip -o data/zips/wy.zip
 
 ;;; UNZIP ;;;
+
+data/al_legislators.csv <- [-timecheck]
+  unzip data/zips/al.zip al_legislators.csv -d ./data
+
 data/ak_legislators.csv <- [-timecheck]
   unzip data/zips/ak.zip ak_legislators.csv -d ./data
+
+data/az_legislators.csv <- [-timecheck]
+  unzip data/zips/az.zip az_legislators.csv -d ./data
+
+data/ar_legislators.csv <- [-timecheck]
+  unzip data/zips/ar.zip ar_legislators.csv -d ./data
+
+data/ca_legislators.csv <- [-timecheck]
+  unzip data/zips/ca.zip ca_legislators.csv -d ./data
+
+data/co_legislators.csv <- [-timecheck]
+  unzip data/zips/co.zip co_legislators.csv -d ./data
+
+data/ct_legislators.csv <- [-timecheck]
+  unzip data/zips/ct.zip ct_legislators.csv -d ./data
+
+data/de_legislators.csv <- [-timecheck]
+  unzip data/zips/de.zip de_legislators.csv -d ./data
+
+data/dc_legislators.csv <- [-timecheck]
+  unzip data/zips/dc.zip dc_legislators.csv -d ./data
+
+data/fl_legislators.csv <- [-timecheck]
+  unzip data/zips/fl.zip fl_legislators.csv -d ./data
+
+data/ga_legislators.csv <- [-timecheck]
+  unzip data/zips/ga.zip ga_legislators.csv -d ./data
+
+data/hi_legislators.csv <- [-timecheck]
+  unzip data/zips/hi.zip hi_legislators.csv -d ./data
+
+data/id_legislators.csv <- [-timecheck]
+  unzip data/zips/id.zip id_legislators.csv -d ./data
+
+data/il_legislators.csv <- [-timecheck]
+  unzip data/zips/il.zip il_legislators.csv -d ./data
+
+data/in_legislators.csv <- [-timecheck]
+  unzip data/zips/in.zip in_legislators.csv -d ./data
+
+data/ia_legislators.csv <- [-timecheck]
+  unzip data/zips/ia.zip ia_legislators.csv -d ./data
+
+data/ks_legislators.csv <- [-timecheck]
+  unzip data/zips/ks.zip ks_legislators.csv -d ./data
+
+data/ky_legislators.csv <- [-timecheck]
+  unzip data/zips/ky.zip ky_legislators.csv -d ./data
+
+data/la_legislators.csv <- [-timecheck]
+  unzip data/zips/la.zip la_legislators.csv -d ./data
+
+data/me_legislators.csv <- [-timecheck]
+  unzip data/zips/me.zip me_legislators.csv -d ./data
+
+data/md_legislators.csv <- [-timecheck]
+  unzip data/zips/md.zip md_legislators.csv -d ./data
+
+data/ma_legislators.csv <- [-timecheck]
+  unzip data/zips/ma.zip ma_legislators.csv -d ./data
+
+data/mi_legislators.csv <- [-timecheck]
+  unzip data/zips/mi.zip mi_legislators.csv -d ./data
+
+data/mn_legislators.csv <- [-timecheck]
+  unzip data/zips/mn.zip mn_legislators.csv -d ./data
+
+data/ms_legislators.csv <- [-timecheck]
+  unzip data/zips/ms.zip ms_legislators.csv -d ./data
+
+data/mo_legislators.csv <- [-timecheck]
+  unzip data/zips/mo.zip mo_legislators.csv -d ./data
+
+data/mt_legislators.csv <- [-timecheck]
+  unzip data/zips/mt.zip mt_legislators.csv -d ./data
+
+data/ne_legislators.csv <- [-timecheck]
+  unzip data/zips/ne.zip ne_legislators.csv -d ./data
+
+data/nv_legislators.csv <- [-timecheck]
+  unzip data/zips/nv.zip nv_legislators.csv -d ./data
+
+data/nh_legislators.csv <- [-timecheck]
+  unzip data/zips/nh.zip nh_legislators.csv -d ./data
+
+data/nj_legislators.csv <- [-timecheck]
+  unzip data/zips/nj.zip nj_legislators.csv -d ./data
+
+data/nm_legislators.csv <- [-timecheck]
+  unzip data/zips/nm.zip nm_legislators.csv -d ./data
+
+data/ny_legislators.csv <- [-timecheck]
+  unzip data/zips/ny.zip ny_legislators.csv -d ./data
+
+data/nc_legislators.csv <- [-timecheck]
+  unzip data/zips/nc.zip nc_legislators.csv -d ./data
+
+data/nd_legislators.csv <- [-timecheck]
+  unzip data/zips/nd.zip nd_legislators.csv -d ./data
+
+data/oh_legislators.csv <- [-timecheck]
+  unzip data/zips/oh.zip oh_legislators.csv -d ./data
+
+data/ok_legislators.csv <- [-timecheck]
+  unzip data/zips/ok.zip ok_legislators.csv -d ./data
+
+data/or_legislators.csv <- [-timecheck]
+  unzip data/zips/or.zip or_legislators.csv -d ./data
+
+data/pa_legislators.csv <- [-timecheck]
+  unzip data/zips/pa.zip pa_legislators.csv -d ./data
+
+data/pr_legislators.csv <- [-timecheck]
+  unzip data/zips/pr.zip pr_legislators.csv -d ./data
+
+data/ri_legislators.csv <- [-timecheck]
+  unzip data/zips/ri.zip ri_legislators.csv -d ./data
+
+data/sc_legislators.csv <- [-timecheck]
+  unzip data/zips/sc.zip sc_legislators.csv -d ./data
+
+data/sd_legislators.csv <- [-timecheck]
+  unzip data/zips/sd.zip sd_legislators.csv -d ./data
+
+data/tn_legislators.csv <- [-timecheck]
+  unzip data/zips/tn.zip tn_legislators.csv -d ./data
+
+data/tx_legislators.csv <- [-timecheck]
+  unzip data/zips/tx.zip tx_legislators.csv -d ./data
+
+data/ut_legislators.csv <- [-timecheck]
+  unzip data/zips/ut.zip ut_legislators.csv -d ./data
+
+data/vt_legislators.csv <- [-timecheck]
+  unzip data/zips/vt.zip vt_legislators.csv -d ./data
+
+data/va_legislators.csv <- [-timecheck]
+  unzip data/zips/va.zip va_legislators.csv -d ./data
+
+data/vi_legislators.csv <- [-timecheck]
+  unzip data/zips/vi.zip vi_legislators.csv -d ./data
+
+data/wa_legislators.csv <- [-timecheck]
+  unzip data/zips/wa.zip wa_legislators.csv -d ./data
+
+data/wv_legislators.csv <- [-timecheck]
+  unzip data/zips/wv.zip wv_legislators.csv -d ./data
+
+data/wi_legislators.csv <- [-timecheck]
+  unzip data/zips/wi.zip wi_legislators.csv -d ./data
+
+data/wy_legislators.csv <- [-timecheck]
+  unzip data/zips/wy.zip wy_legislators.csv -d ./data
 
 ;;; DISTRICTS BY COUNTY ;;;
 data/districts_by_county.csv <- [-timecheck]
@@ -195,5 +352,3 @@ data/zips/state_lawmaker_disclosures.zip <- [-timecheck]
 ;  `touch` updates the timestamp on the file or 
 ;   creates an empty file if the file doesn't exist
 ;  `&&` the second command only runs if the first command finishes
-
-
