@@ -159,9 +159,6 @@ data/zips/vt.zip <- [-timecheck]
 data/zips/va.zip <- [-timecheck]
   curl -s https://data.openstates.org/legacy/csv/va.zip -o data/zips/va.zip
       
-data/zips/vi.zip <- [-timecheck]
-  curl -s https://data.openstates.org/legacy/csv/vi.zip -o data/zips/vi.zip
-      
 data/zips/wa.zip <- [-timecheck]
   curl -s https://data.openstates.org/legacy/csv/wa.zip -o data/zips/wa.zip
 
@@ -319,9 +316,6 @@ data/vt_legislators.csv <- [-timecheck]
 
 data/va_legislators.csv <- [-timecheck]
   unzip data/zips/va.zip va_legislators.csv -d ./data
-
-data/vi_legislators.csv <- [-timecheck]
-  unzip data/zips/vi.zip vi_legislators.csv -d ./data
 
 data/wa_legislators.csv <- [-timecheck]
   unzip data/zips/wa.zip wa_legislators.csv -d ./data
