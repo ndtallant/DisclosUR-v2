@@ -334,8 +334,8 @@ data/districts_by_county.csv <- [-timecheck]
   python scripts/districts.py
 
 ;;; CPI DATA ;;;
-data/zips/state_lawmaker_disclosures.zip <- [-timecheck]
-  curl -s https://github.com/PublicI/state-lawmakers-disclosures/archive/master.zip -o data/zips/state_lawmaker_disclosures.zip
+data/lawmakers.csv <- [-timecheck]
+  curl -s https://raw.githubusercontent.com/PublicI/state-lawmakers-disclosures/master/lawmakers.csv -o data/lawmakers.csv
 
 ;;; LOAD THE DATA  ;;;
 
