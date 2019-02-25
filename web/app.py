@@ -5,26 +5,34 @@ app.py
 Server logic lives here!
 
 '''
-
-from flask import Flask
-from flask import request, render_template
-from flask.ext.sqlalchemy import SQLAlchemy
-from config import BaseConfig
-
+from flask_bootstrap import Bootstrap
+from flask import Flask, request, render_template
+from flask import url_for, session, redirect
+from flask_wtf import FlaskForm
+from wtforms import StringField, SelectField
+from wtforms.validators import DataRequired
 
 app = Flask(__name__)
-app.config.from_object(BaseConfig)
-db = SQLAlchemy(app)
+bootstrap = Bootstrap(app)
 
-
-from models import *
-
+# Move to env later
+app.config['SECRET_KEY'] = 'my secret key'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':
-    return render_template('index.html')
+    form = InputForm()
+    if form.validate_on_submit():
+        session['user_state'] = form.user_state.data
+        session['user_district'] = form.user_district.data
+        return redirect(url_for('index'))
+    return render_template('index.html', form=form
+            , user_state=session.get('user_state')
+            , user_district=session.get('user_district'))
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
-if __name__ == '__main__':
-    app.run()
+class InputForm(FlaskForm):
+    user_state = SelectField(choices=[('tx', 'Texas'), ('ak', 'Alaska')])
+    user_district = StringField() #SelectField()

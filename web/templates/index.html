@@ -1,36 +1,7 @@
-{% extends "base.html" %}
 <!doctype html>
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
 
-{% block title %} {{ super() }} {% endblock %}
-    
-    {% block content %}
-    <div class="container">
-        <form action="results" method="post">
-          <h1 style="text-align: center;">DisclosUR</h1>
-          
-          <fieldset>
-          <div class="row">
-            <div class="col-25">
-              <label for="country">State</label>
-            </div>
-            <div class="col-75">
-              <select id="state" name="user_state">
-                <option value="">State</option>
-                <option value="TX">TX</option>
-                <option value="IL">IL</option>
-              </select>
-              <select id="county" name="user_county">
-                <option value="">County</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-              </select>
-            </div>
-          </div>
-          </fieldset>
-
-      </form>
-    </div> 
-    {% endblock %}
-    
-
-</body>
+{% block page_content %}
+{{ wtf.quick_form(form) }}
+{% endblock %}
