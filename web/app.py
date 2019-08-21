@@ -3,15 +3,19 @@
     ------
 
 '''
+
 from flask import Flask, render_template, url_for, session, redirect
 from config import Config
+app = Flask(__name__)
+app.config.from_object(Config)
+
 from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy(app)
+
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField
 
-app = Flask(__name__)
-app.config.from_object(Config)
-db = SQLAlchemy(app)
+from models import RawLegislator
 
 
 @app.route('/', methods=['GET', 'POST'])

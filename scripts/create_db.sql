@@ -9,7 +9,7 @@
 /* Open States */
 DROP TABLE IF EXISTS raw_legislators;
 CREATE TABLE raw_legislators (
-    leg_id INT NOT NULL,
+    leg_id VARCHAR NOT NULL,
     full_name VARCHAR NOT NULL,
     first_name VARCHAR,
     middle_name VARCHAR,
