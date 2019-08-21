@@ -2,37 +2,43 @@
     app.py
     ------
 
-'''
+    Author: ndtallant
 
+    Description: This file is the server logic for the website. Rather than a
+    separate models file, the existing database tables are reflected to
+    SQLAlchemy table ojects.
+
+'''
 from flask import Flask, render_template, url_for, session, redirect
 from config import Config
+from flask_sqlalchemy import SQLAlchemy
+
 app = Flask(__name__)
 app.config.from_object(Config)
-
-from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy(app)
 
-from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField
+# Reflect Tables from DB to SQLAlchemy Models
+legislator = db.Table(
+    'legislator', db.metadata, autoload=True, autoload_with=db.engine
+)
 
-from models import RawLegislator
-
+cpi = db.Table(
+    'cpi', db.metadata, autoload=True, autoload_with=db.engine
+)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    form = InputForm()
-    if form.validate_on_submit():
-        session['user_state'] = form.user_state.data
-        session['user_district'] = form.user_district.data
-        return redirect(url_for('index'))
-    return render_template('index.html', form=form
-            , user_state=session.get('user_state')
-            , user_district=session.get('user_district'))
+    """Home page of the webapp."""
+    return '<h1>Hello, World!</h1>'
+
+@app.route('/results')
+def results():
+    """Returns the legislators and relevant information."""
+    print(db.session.query(legislator).all()[:10])
+    print(db.session.query(cpi).all()[:10])
+    return '<h1>Hello, Results!</h1>'
 
 @app.route('/about')
 def about():
+    """Simply renders the about page."""
     return render_template('about.html')
-
-class InputForm(FlaskForm):
-    user_state = SelectField(choices=[('tx', 'Texas'), ('ak', 'Alaska')])
-    user_district = StringField()
