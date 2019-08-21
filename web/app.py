@@ -1,22 +1,18 @@
 '''
-app.py
-------
-
-Server logic lives here!
+    app.py
+    ------
 
 '''
-from flask_bootstrap import Bootstrap
-from flask import Flask, request, render_template
-from flask import url_for, session, redirect
+from flask import Flask, render_template, url_for, session, redirect
+from config import Config
+from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField
-from wtforms.validators import DataRequired
 
 app = Flask(__name__)
-bootstrap = Bootstrap(app)
+app.config.from_object(Config)
+db = SQLAlchemy(app)
 
-# Move to env later
-app.config['SECRET_KEY'] = 'my secret key'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -35,4 +31,4 @@ def about():
 
 class InputForm(FlaskForm):
     user_state = SelectField(choices=[('tx', 'Texas'), ('ak', 'Alaska')])
-    user_district = StringField() #SelectField()
+    user_district = StringField()
