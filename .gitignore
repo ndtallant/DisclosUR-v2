@@ -1,4 +1,5 @@
 # Custom
+*.db
 data/*
 .drake/*
 drake.log
