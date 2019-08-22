@@ -17,11 +17,9 @@ app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 
-# Reflect Tables from DB to SQLAlchemy Models
-legislator = db.Table(
-    'legislator', db.metadata, autoload=True, autoload_with=db.engine
-)
+from models import Legislator
 
+# Reflect Tables from DB to SQLAlchemy Models
 cpi = db.Table(
     'cpi', db.metadata, autoload=True, autoload_with=db.engine
 )
@@ -34,7 +32,7 @@ def index():
 @app.route('/results')
 def results():
     """Returns the legislators and relevant information."""
-    legislators = db.session.query(legislator).all()[:20]
+    legislators = Legislator.query.all()[:20]
     return render_template('results.html', legislators=legislators)
 
 @app.route('/about')
