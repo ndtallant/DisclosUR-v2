@@ -22,6 +22,3 @@ curl -s https://raw.githubusercontent.com/PublicI/state-lawmakers-disclosures/ma
 # Pesky ASCII codes
 # TODO: Fix the sed/gsed on OSX debacle... maybe in docker...
 vim -c ':%s/\%x92//g' -c ':x' data/cpi.csv 
-
-echo .exit | sqlite3 --init scripts/create_db.sql web/app.db
-echo .exit | sqlite3 --init scripts/clean_db.sql web/app.db
