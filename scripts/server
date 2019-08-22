@@ -1,0 +1,4 @@
+# This script starts the flask server
+export FLASK_APP=web/app.py
+export FLASK_DEBUG=1
+python -m flask run

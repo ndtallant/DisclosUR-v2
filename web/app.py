@@ -29,14 +29,13 @@ cpi = db.Table(
 @app.route('/', methods=['GET', 'POST'])
 def index():
     """Home page of the webapp."""
-    return '<h1>Hello, World!</h1>'
+    return render_template('index.html')
 
 @app.route('/results')
 def results():
     """Returns the legislators and relevant information."""
-    print(db.session.query(legislator).all()[:10])
-    print(db.session.query(cpi).all()[:10])
-    return '<h1>Hello, Results!</h1>'
+    legislators = db.session.query(legislator).all()[:20]
+    return render_template('results.html', legislators=legislators)
 
 @app.route('/about')
 def about():

@@ -1,4 +1,14 @@
 {% extends "base.html" %}
-<!doctype html>
-
-
+{% block content %}
+    {% for legislator in legislators %}
+        <div class="row py-3 my-2 px-2 mask rgba-black-strong white-text rounded">
+            <div class="col-md-4">
+                <img src="{{ legislator.photo_url }}" style="max-width: 90%">
+            </div>
+            
+            <div class="col-md-8">
+                <h2>{{ legislator.full_name }} ({{ legislator.cleaned_party }}), {{ legislator.state }}</h2>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
