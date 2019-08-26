@@ -13,7 +13,7 @@ class Legislator(db.Model):
     cleaned_party = db.Column(db.String, nullable=False)
     state = db.Column(db.String, nullable=False)
     photo_url = db.Column(db.String)
-    interest = db.relationship('Interest', lazy='dynamic')
+    interests = db.relationship('Interest', backref='cpi')
 
 
 class Interest(db.Model):

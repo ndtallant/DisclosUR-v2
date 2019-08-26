@@ -7,7 +7,14 @@
             </div>
             
             <div class="col-md-8">
-                <h2>{{ legislator.full_name }} ({{ legislator.cleaned_party }}), {{ legislator.state }}</h2>
+                <h2>{{ legislator.full_name }}</h2> 
+                <hr class="hr-light">
+                <h3>({{ legislator.cleaned_party }}), {{ legislator.state }}</h3>
+                {% for interest in legislator.interests %}
+                    <div class="disclosure">
+                        <p><a href="{{ interest.disclosure_report }}" target="_blank">DisclosUR</a></p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     {% endfor %}

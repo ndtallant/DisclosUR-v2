@@ -4,10 +4,7 @@
 
     Author: ndtallant
 
-    Description: This file is the server logic for the website. Rather than a
-    separate models file, the existing database tables are reflected to
-    SQLAlchemy table ojects.
-
+    Description: This file is the server logic for the website.
 '''
 from flask import Flask, render_template, url_for, session, redirect
 from config import Config
@@ -19,11 +16,6 @@ db = SQLAlchemy(app)
 
 from models import Legislator, Interest
 
-# Reflect Tables from DB to SQLAlchemy Models
-#cpi = db.Table(
-#    'cpi', db.metadata, autoload=True, autoload_with=db.engine
-#)
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     """Home page of the webapp."""
@@ -33,8 +25,6 @@ def index():
 def results():
     """Returns the legislators and relevant information."""
     legislators = Legislator.query.all()[:20]
-    for legislator in legislators:
-        print(legislator.full_name, legislator.interest)
     return render_template('results.html', legislators=legislators)
 
 @app.route('/about')
